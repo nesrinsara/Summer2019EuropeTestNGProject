@@ -2,6 +2,7 @@ package com.cybertek.tests.day11_actions_jsexecutor;
 
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -76,5 +77,22 @@ public class ActionsTest {
         driver.get("http://practice.cybertekschool.com/jqueryui/menu");
 
     }
+    @Test
+    public void StaleTest(){
+        driver.get("http://google.com");
+        WebElement input = driver.findElement(By.name("q"));
+        input.sendKeys("Selenium" + Keys.ENTER);
+        WebElement results = driver.findElement(By.id("resultStats"));
+        Assert.assertTrue(results.isDisplayed());
+        //go to google second time
+        driver.navigate().back();
+        input = driver.findElement(By.name("q"));
+        input.sendKeys("Java"+ Keys.ENTER);
+    }
+
+
+
+
+
 
 }
