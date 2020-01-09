@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Vytrack automation" verbose="1">
+    <!--    How to run multiple classes from different packages-->
+    <test name="Vytrack smoke tests">
+        <classes>
+            <class name="com.cybertek.tests.day14_pom_tests.NegativeLoginTests">
+                <methods>
+                    <exclude name="wrongUsername"></exclude>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

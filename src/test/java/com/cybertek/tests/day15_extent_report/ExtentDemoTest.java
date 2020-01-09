@@ -28,6 +28,7 @@ public class ExtentDemoTest {
         //initialize the html reporter with the report path
         htmlReporter=new ExtentHtmlReporter((path));
 
+
         //attach the html report to the report object
         report.attachReporter(htmlReporter);
 

@@ -51,5 +51,6 @@ public class ExplicitWaitTest {
         //type something in the inputbox
         inputBox.sendKeys("Something something");
 
+
     }
 }

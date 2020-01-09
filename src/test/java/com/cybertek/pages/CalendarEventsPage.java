@@ -14,4 +14,11 @@ public class CalendarEventsPage extends BasePage {
     @FindBy(css = "[title='Create Calendar event']")
     public WebElement createCalendarEvent;
 
+    @FindBy(xpath = "//i[@class='fa-cog hide-text']")
+    public WebElement gridSettings;
+
+    //@FindBy(xpath = "(//*[@class='dropdown-toggle'])[20]")
+    //public WebElement threeDotsTestersMeeting;
+
+
 }
